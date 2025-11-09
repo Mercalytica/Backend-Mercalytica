@@ -20,6 +20,7 @@ class ModelService:
             {"$push": {"messages": message_doc}},
             upsert=True
         )
+     
      def get_messages_by_session_id(self, id_session: str) -> List[ChatMessage]:
         chat_document = self.collectionChat.find_one(
             {"id_session": id_session},

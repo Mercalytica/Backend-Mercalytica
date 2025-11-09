@@ -5,6 +5,10 @@ from config.env import EnvConfig
 from services.companies import CompaniesServicer
 from services.products import ProductsServicer
 from services.orders import OrdersServicer 
+import logging
+
+logging.getLogger("asyncio").setLevel(logging.WARNING)
+
 
 # Inicialización del Framework y la Conexión a la Base de Datos
 mcp = FastMCP("chatbot-server")
