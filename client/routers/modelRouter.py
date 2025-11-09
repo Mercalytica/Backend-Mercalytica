@@ -53,3 +53,20 @@ async def download_report(filename: str):
         filename=filename,
         media_type='application/pdf'
     )
+
+@modelRouter.get("/chatBot/history/{session_id}", tags=["ChatBots"])
+async def get_chat_history(session_id: str):
+    """
+    Recupera el historial de mensajes de una sesión existente usando 
+    el ID de sesión como parámetro de ruta.
+    """
+    # Llamamos al controlador pasándole directamente el session_id
+    history = await controller.getSeccionBySession(session_id)
+    
+    # Devuelve la lista de objetos ChatMessage
+    return history
+
+@modelRouter.get("/chatBot/myHistory/{user_id}", tags=["ChatBots"])
+async def get_chat_history(user_id: str):
+    history = await controller.getChatsById(user_id)
+    return history

@@ -91,8 +91,7 @@ class ChatBotService:
             # En caso de error, devuelve un mensaje de error y no se genera PDF
             print(f"Error en generate_response_with_history: {e}")
             return f"ERROR: Fallo al procesar la solicitud del modelo. Por favor, inténtelo de nuevo. Detalle: {str(e)}", None
-
-    
+  
     def _generate_report_pdf(self, content: str) -> str:
         """Función interna para crear y guardar el archivo PDF."""
         pdf = FPDF(orientation='P', unit='mm', format='A4')
