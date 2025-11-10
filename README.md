@@ -63,13 +63,13 @@ La solución se estructura en tres capas principales:
 
 ```bash
  # 1️ Clonar el repositorio
-git clone https://github.com/usuario/nombre-del-proyecto.git
+git clone https://github.com/Mercalytica/Backend-Mercalytica
 ```
 
 ```bash
 # 2 Moverse a la carpeta del proyecto
 
-cd nombre-del-proyecto
+cd Backend-Mercalytica
 ```
 
 ```bash
